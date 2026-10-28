@@ -1,0 +1,29 @@
+# Videos are big and private: only the README and the catalog are versioned
+videos/*
+!videos/README.md
+!videos/catalog.json
+
+# Python environments and caches
+tools/venv*/
+__pycache__/
+*.pyc
+
+# Generated
+work/
+check_report.txt
+node_modules/
+
+# Media never goes to git
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.mkv
+*.wav
+*.mp3
+*.m4a
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
