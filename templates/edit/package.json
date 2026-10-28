@@ -1,0 +1,23 @@
+{
+  "final_title": "I Ate Only Street Food for a Day ($20)",
+  "alternatives": ["$20, One Day, Only Street Food", "Is Street Food Worth It?"],
+  "titles": ["★ I Ate Only Street Food for a Day ($20)", "★ $20, One Day, Only Street Food", "★ Is Street Food Worth It?",
+             "The $1.50 Breakfast You Can't Miss", "…12 options in total"],
+  "blurb": "One day, twenty dollars, only street food: what it buys and what's worth it.",
+  "summary": ["Paragraph 1 of the description.", "Paragraph 2."],
+  "chapters": [["B01", "The challenge"], ["B02", "Breakfast at the market"], ["B03", "Verdict"]],
+  "sources": ["Prices: what each stall charged on the day of filming."],
+  "credits": ["Market 1970 photo: City archive, public domain (Wikimedia Commons)."],
+  "disclaimer": "",
+  "hashtags": ["#StreetFood", "#Travel"],
+  "tags": ["street food", "food tour", "budget travel"],
+  "thumbnails": [
+    {"id": "A", "text": "ONLY $20?!", "main": true, "frame_t": 6.2, "prop": "He holds a steaming empanada next to his face.",
+     "composition": "The host on the left third", "expression": "amazed, eyebrows up", "background": "a busy market with food stalls",
+     "colour": "Warm, bright daylight."},
+    {"id": "B", "text": "WORTH IT?", "frame_t": 60.0, "composition": "The host centred", "expression": "skeptical, half smile",
+     "background": "a street food cart at night"},
+    {"id": "C", "text": "30 YEARS", "frame_t": 45.0, "composition": "The host on the right third", "expression": "warm smile",
+     "background": "the cook's stall"}
+  ]
+}

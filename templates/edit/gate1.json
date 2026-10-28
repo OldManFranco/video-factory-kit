@@ -1,0 +1,9 @@
+{
+  "brief": "One day eating only street food with $20. Promise: what $20 really buys. Proposed title: I Ate Only Street Food for a Day ($20).",
+  "decisions": [
+    {"title": "Rosa's full story (B02)", "detail": "She talks for 47 s; I kept 38 s. The cut part is about her grandson.", "options": ["Keep as is", "Put it all back"]}
+  ],
+  "facts": [["'open since five a.m.'", "1:12", "Rosa says it; no other source → stays in her voice, no graphic"]],
+  "not_filmed": ["The outline's dinner stop wasn't filmed."],
+  "text_fixes": [["empanda", "empanada"]]
+}

@@ -1,0 +1,29 @@
+{
+  "elements": [
+    {"block": "B01", "type": "G-TITLE", "anchor": "Today I'm only eating", "until": "from the street.",
+     "line1": "ONE DAY,", "line2": "ONLY STREET FOOD"},
+    {"block": "B01", "type": "G-COUNTER", "anchor": "twenty dollars", "until": "the whole day.",
+     "number": "$20", "label": "FOR THE WHOLE DAY", "source": "host"},
+    {"block": "B02", "type": "BROLL", "anchor": "So this is the market", "until": "since five a.m.",
+     "clip": "0008", "from": 2.0, "place": "CENTRAL MARKET", "source": "own",
+     "what_to_see": "the market stalls, wide", "level": 1, "why": "the place he names"},
+    {"block": "B02", "type": "NAME", "anchor": "Llevo treinta años", "dur": 4, "name": "Rosa", "role": "Cook"},
+    {"block": "B02", "type": "PHOTO", "anchor": "since five a.m.", "until": "since five a.m.", "file": "photos/market_1970.jpg",
+     "place": "THE MARKET IN 1970", "credit": "PHOTO: CITY ARCHIVE · PUBLIC DOMAIN",
+     "source_url": "https://commons.wikimedia.org/wiki/File:...", "licence": "Public domain", "author": "City archive"},
+    {"block": "B02", "type": "G-BARS", "anchor": "Thirty years", "until": "I'm getting two.",
+     "title": "WHAT $20 BUYS", "subtitle": "BREAKFAST", "source": "host",
+     "bars": [{"label": "EMPANADA", "value": 1.5, "value_text": "$1.50", "anchor": "empanada"},
+              {"label": "COFFEE", "value": 0.8, "value_text": "$0.80", "anchor": "coffee"}], "highlight": [0]},
+    {"block": "B03", "type": "LINK", "anchor": "link in the description", "until": "in the description", "text": "LINK IN DESCRIPTION"},
+    {"block": "B03", "type": "PUNCH", "anchor": "So was it worth it", "until": "worth it", "zoom": 1.13}
+  ],
+  "subtitles": [
+    {"block": "B02", "clip": "0012", "from": 4.0, "to": 7.6, "text": "I've been here thirty years,"},
+    {"block": "B02", "clip": "0012", "from": 7.6, "to": 10.9, "text": "first with my mother."}
+  ],
+  "sources": {"host": "What the host says on camera (prices read from the stall's board)."},
+  "decisions": [
+    {"default": "D9", "what": "full-screen counter for '$20'", "why": "a hero number with a clear shape", "lesson": "", "date": "2026-11-02"}
+  ]
+}

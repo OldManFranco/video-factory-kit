@@ -12,7 +12,6 @@ Reads work/script_resolved.json, audio_flags.md, people_pending.md and, optional
 }
 Usage: python tools/gate1_page.py <video> [<url of the cut audio>]
 """
-import re
 import sys
 
 from vfk.kit import Video, fmt, load

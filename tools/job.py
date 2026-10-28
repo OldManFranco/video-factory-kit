@@ -5,7 +5,6 @@ Usage:
   python tools/job.py <video> <stage> -- <command ...>      launch (e.g. ... render -- tools/venv_render/bin/python tools/render_all.py "videos/x")
   python tools/job.py <video> list                          list jobs and their last log line
 """
-import json
 import os
 import subprocess
 import sys

@@ -1,0 +1,27 @@
+{
+  "title": "I Ate Only Street Food for a Day",
+  "interviews": [
+    {"name": "Rosa", "clip": "0012", "from": 4.0, "to": 51.5}
+  ],
+  "blocks": [
+    {"id": "B01", "role": "COLD OPEN", "section": "§1 · The challenge",
+     "segments": [
+       {"clip": "0003", "from": "Today I'm only eating", "to": "from the street."},
+       {"clip": "0003", "from": "and I have twenty dollars", "to": "the whole day.", "occurrence": 2}
+     ],
+     "note": "Take 2 of 'and I have twenty dollars' (take 1 stumbles on 'dollars')."},
+    {"id": "B02", "role": "SECTION", "section": "§2 · Breakfast at the market",
+     "segments": [
+       {"clip": "0007", "from": "So this is the market", "to": "since five a.m.", "remove": [[18.20, 19.05]]},
+       {"clip": "0012", "lang": "es", "from": "Llevo treinta años", "to": "con mi mamá."},
+       {"clip": "0007", "from": "Thirty years", "to": "I'm getting two.", "in": 44.10, "force": true,
+        "why": "the earlier take ends right before; measured on the audio energy"}
+     ],
+     "note": "Out: the filler 'uh, like' at 18.2 s.",
+     "check": "'open since five a.m.' is what she says; no other source."},
+    {"id": "B03", "role": "CLOSING", "section": "§3 · Verdict",
+     "segments": [
+       {"clip": "0021", "from": "So was it worth it", "to": "see you in the next one.", "air_out": 1.6}
+     ]}
+  ]
+}

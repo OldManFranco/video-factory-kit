@@ -11,6 +11,7 @@ video through 3 approval gates. You (Claude) do the editing work; the person you
 2. Talk to the editor in the profile's `chat_language`. On-screen text uses `on_screen_language`.
 3. Read `docs/rules.md` (the judgement for every video). Read the stage of `docs/SOP.md` you are about to run.
 4. **If the session is about a video**, the first command is `python tools/status.py "videos/<name>"`.
+   When the editor writes "approved" at a gate, record it: `python tools/status.py "videos/<name>" approve 1` (2, 3).
    It checks the disk and says what is done and what comes next. Never start over, never re-analyse
    what is already on disk. Also read `videos/<name>/STATUS.md`.
 5. `git branch --show-current` tells you which version of the rules is active (see `docs/git_workflow.md`).
@@ -48,7 +49,7 @@ footage check → transcript → script → cut + audio QA → **GATE 1** → ed
 | Rules / SOP / first session / git workflow | `docs/` |
 | Tools (Python) | `tools/` — run with the two venvs (`docs/SOP.md` §0) |
 | Brand files, fonts, people cutouts, maps | `assets/` |
-| Page templates (gates, storyboard, package) | `templates/` |
+| Examples of every file you write per video (script, sheet, package…) | `templates/edit/` |
 | One folder per video | `videos/<date> <name>/` (layout in `docs/SOP.md` §0) |
 | Published videos record | `videos/catalog.json` |
 

@@ -18,7 +18,7 @@ Suggest an answer when you can (from the channel study) so the editor only has t
 
 With the URL, Claude studies the channel before asking more questions, so the interview is mostly confirming:
 
-1. `py-audio tools/channel_study.py <channel URL>` (uses yt-dlp, reads public data only; no login):
+1. `py-audio tools/channel_study.py <channel URL>` (uses yt-dlp, reads public data only; no login; results in `work/channel_study/`):
    - the list of videos: titles, length, upload date, views → `work/channel_study/videos.json`;
    - the 5 most viewed + the 5 most recent: description, chapters, auto-captions → `work/channel_study/`;
    - their thumbnails → `work/channel_study/thumbnails/`.
@@ -66,9 +66,13 @@ Show what the study found, then ask what's missing. Group the questions like thi
 1. Propose **3 simple palettes** that fit the channel (from the study and the answers). Each palette = 5 colours:
    `background` (light), `dark`, `accent` (one strong colour for the one word that matters), `neutral`, `light` (white).
    Check contrast: text in `dark` on `background`, and `light` on `dark`/`accent`, must be easy to read.
-2. Propose **2 font pairs** from Google Fonts (free licence, OFL): a bold heading font and a readable body font.
-3. `py-render tools/make_brand.py --preview` shows the 3 palettes × 2 font pairs on a sample lower third, name card, timeline and end card → `work/brand_preview.html`. The editor picks one.
-4. `py-render tools/make_brand.py` downloads the chosen fonts to `assets/fonts/` and makes a simple banner (channel name + palette) in `assets/brand/` for the end card.
+2. Propose **2 font pairs** from Google Fonts (free OFL licence): a bold heading font and a readable body font.
+3. Write them to `work/brand/options.json` (format at the top of `tools/make_brand.py`), then
+   `py-render tools/make_brand.py --preview` → `work/brand/preview.html`: every palette × font pair on a sample number
+   card, lower third, name card and end card. The editor picks one ("palette 2 with fonts 1").
+4. `py-render tools/make_brand.py --apply 2 1` copies the fonts to `assets/fonts/`, makes `assets/brand/end_card.png`
+   (the video's end screen) and `assets/brand/youtube_banner.png` (2560×1440), and writes colours, fonts and banner into
+   the profile's JSON block.
 
 ## Step 5 · Write the profile and confirm
 

@@ -44,7 +44,8 @@ if FINAL:
             raise SystemExit("No MP4 in render/final/.")
         mp4 = finals[-1]
     src, cache, name = v.cut / "final16.wav", v.cut / "qa_final_heard.json", "qa_final"
-    ffmpeg("-y", "-i", mp4, "-vn", "-ac", 1, "-ar", 16000, "-c:a", "pcm_s16le", src)
+    # only the cut: in the silent end screen Whisper invents words ("thank you")
+    ffmpeg("-y", "-i", mp4, "-t", f"{v.edl()['duration_s'] + 1.0:.3f}", "-vn", "-ac", 1, "-ar", 16000, "-c:a", "pcm_s16le", src)
 
 # what must be heard: the words of the edit list (other-language segments are skipped: they are someone else's speech)
 expected = [(t, w["s"]) for s in EDL if not s.get("lang") for w in s["words"] for t in tokens(w["w"])]

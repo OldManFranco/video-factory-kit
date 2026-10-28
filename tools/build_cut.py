@@ -16,7 +16,7 @@ from fractions import Fraction
 
 import numpy as np
 
-from vfk.kit import Video, fmt, rel
+from vfk.kit import Video, fmt, rel, save
 from vfk.media import extract_audio, ffmpeg, read_wav, vcodec_args, write_wav
 
 if len(sys.argv) < 3 or sys.argv[2] not in ("audio", "video"):
@@ -63,7 +63,7 @@ def video():
     sizes = Counter((info[c]["width"], info[c]["height"]) for c in info if info[c].get("type") in ("A-ROLL", "MIXED", "INTERVIEW") and "width" in info[c])
     W, H = sizes.most_common(1)[0][0] if sizes else (1920, 1080)
     codec = vcodec_args("high", gop=int(round(float(fps) * 2)))
-    listing, segs = [], EDL["segments"]
+    listing, segs, index = [], EDL["segments"], []
     for k, s in enumerate(segs):
         f0, f1 = round(s["t0"] * fps), round(s["t1"] * fps)
         n = f1 - f0
@@ -75,6 +75,7 @@ def video():
         fp = hashlib.sha1(f"{s['clip']}|{fa}|{n}|{W}x{H}|{fps}|{codec}".encode()).hexdigest()[:12]
         dst = SEG / f"{fp}.mkv"
         listing.append(dst)
+        index.append({"file": dst.name, "t0": float(f0 / fps), "dur": float(n / fps), "frames": n})
         if dst.exists():
             continue
         vf = [] if same else ["-vf", f"fps={fps},scale={W}:{H}:force_original_aspect_ratio=decrease:flags=lanczos,"
@@ -86,6 +87,7 @@ def video():
         print(f"OK {k + 1:03d}/{len(segs)} {s['block']} {v.short(s['clip'])} {n} frames", flush=True)
     lst = v.cut / "video_list.txt"
     lst.write_text("".join(f"file '{p.as_posix()}'\n" for p in listing), encoding="utf-8")
+    save(v.cut / "segments.json", {"fps": str(fps), "width": W, "height": H, "segments": index})
     print(f"video: {len(listing)} segments, {W}x{H} @ {float(fps):.3f} → {rel(lst)}", flush=True)
     if "--mp4" in sys.argv:
         out = v.cut / "cut.mp4"

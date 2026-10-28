@@ -76,7 +76,9 @@ Pinned comment = the CTAs, never a discussion question.
   "host_on_screen_name": "",
   "editor_name": "",
   "chat_language": "en",
+  "spoken_language": "en",
   "on_screen_language": "en",
+  "vocabulary": [],
   "colors": {
     "background": "#F2F2EF",
     "dark": "#16181D",
@@ -85,10 +87,11 @@ Pinned comment = the CTAs, never a discussion question.
     "light": "#FFFFFF"
   },
   "fonts": {
-    "heading": "Inter ExtraBold",
-    "body": "Inter SemiBold",
-    "heading_file": "assets/fonts/Inter-ExtraBold.ttf",
-    "body_file": "assets/fonts/Inter-SemiBold.ttf"
+    "heading": "Poppins ExtraBold",
+    "body": "Poppins SemiBold",
+    "heading_file": "assets/fonts/Poppins-ExtraBold.ttf",
+    "body_file": "assets/fonts/Poppins-SemiBold.ttf",
+    "light_file": "assets/fonts/Poppins-Medium.ttf"
   },
   "logo_file": "",
   "banner_file": "",

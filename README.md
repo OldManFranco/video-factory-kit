@@ -8,8 +8,8 @@ You stay in control: Claude **stops at 3 approval gates** and waits for you to w
 
 Maintained by Franco.
 
-> **Status:** work in progress. Phase 1 (docs, rules, channel profile) is in. The tools, installers and an
-> end-to-end test arrive in the next phases.
+> **Status:** work in progress. The docs, rules, channel profile and tools are in. The installers for Windows and Mac
+> and a full end-to-end test arrive in the next phases.
 
 ---
 
@@ -83,7 +83,7 @@ of the host to use in your image tool. Each field has a "Copy" button.
 | `docs/git_workflow.md` | how changes to the kit are versioned |
 | `docs/known_problems.md` | things that went wrong before, and the fixes |
 | `tools/` | the Python tools |
-| `templates/` | page templates (gates, storyboard, publishing package) |
+| `templates/` | examples of the files Claude writes for each video |
 | `assets/` | your brand files, fonts, people cutouts, maps |
 | `videos/` | one folder per video (not uploaded to git) |
 
