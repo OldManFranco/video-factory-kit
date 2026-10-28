@@ -18,12 +18,14 @@ from collections import Counter
 from pathlib import Path
 
 from vfk.kit import ROOT, save
+from vfk.profile import load_profile
 
 if len(sys.argv) < 2:
     raise SystemExit(__doc__)
 url = sys.argv[1].rstrip("/")
 TOP = int(sys.argv[sys.argv.index("--top") + 1]) if "--top" in sys.argv else 5
 RECENT = int(sys.argv[sys.argv.index("--recent") + 1]) if "--recent" in sys.argv else 5
+LANG = load_profile().get("spoken_language", "en")
 OUT = ROOT / "work" / "channel_study"
 OUT.mkdir(parents=True, exist_ok=True)
 YTDLP = [sys.executable, "-m", "yt_dlp"]
@@ -52,7 +54,9 @@ chosen = {x["id"]: x for x in top + recent}
 links = Counter()
 for vid in chosen.values():
     base = OUT / vid["id"]
-    ytdlp("--skip-download", "--write-info-json", "--write-auto-subs", "--write-subs", "--sub-langs", "en.*,es.*,.*-orig",
+    # only the channel's language (asking for every variant makes YouTube answer 429 Too Many Requests)
+    ytdlp("--skip-download", "--write-info-json", "--write-auto-subs", "--write-subs", "--sub-langs", f"{LANG},{LANG}-orig",
+          "--sleep-subtitles", "2",
           "--sub-format", "vtt", "--write-thumbnail", "--convert-thumbnails", "jpg", "-o", str(base) + ".%(ext)s", vid["url"])
     info = json.loads(Path(str(base) + ".info.json").read_text(encoding="utf-8")) if Path(str(base) + ".info.json").exists() else {}
     vtt = sorted(OUT.glob(f"{vid['id']}*.vtt"))
@@ -70,7 +74,7 @@ for vid in chosen.values():
     save(OUT / f"{vid['id']}.json", keep)
     for u in re.findall(r"https?://\S+", info.get("description") or ""):
         links[u.rstrip(").,")] += 1
-    for f in Path(OUT).glob(f"{vid['id']}*.info.json"):
+    for f in list(Path(OUT).glob(f"{vid['id']}*.info.json")) + list(Path(OUT).glob(f"{vid['id']}*.vtt")):
         f.unlink()
     print(f"  {vid['title'][:70]} · {vid.get('views') or '?'} views · captions {'yes' if text else 'no'}")
 durs = [x["duration"] for x in vids if x["duration"]]

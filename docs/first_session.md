@@ -30,6 +30,8 @@ With the URL, Claude studies the channel before asking more questions, so the in
    - the host's tone and pacing (from the captions);
    - CTAs and links that repeat in the descriptions (proposed as the links block).
 3. If the study fails (private channel, no internet, yt-dlp blocked), say so in one line and just ask the questions.
+   If YouTube refuses some captions ("429 Too Many Requests"), the rest of the study still works; run it again later
+   for the captions.
 
 ## Step 3 · Interview (confirm and fill the gaps)
 
