@@ -62,7 +62,7 @@ terminal. You need a Claude subscription (Pro or Max).
 | Gate | When | What you get | What you do |
 |---|---|---|---|
 | **Gate 1** | after the cut | a page with the script block by block, the takes Claude chose (and the borderline ones), named people, facts to check, and an **MP3 of the cut** | listen to the MP3, read the flagged joins (`audio_flags.md`), ask for changes, then write **approved** |
-| **Gate 2** | before rendering | the **storyboard**: every B-roll clip and graphic next to the exact line it covers, the order of the blocks, how much of each interview was kept | reorder or change anything, then write **approved** (the order is locked from here) |
+| **Gate 2** | before rendering | the **storyboard**: the whole video at a glance (one picture per beat, the way the edit will look), every B-roll clip and graphic next to the exact line it covers, the order of the blocks, how much of each interview was kept | reorder or change anything, then write **approved** (the order is locked from here) |
 | **Gate 3** | after rendering | the final MP4 and its QA report (sound level, sync, no cut-off words) | watch it, ask for fixes, then write **approved** |
 
 After Gate 3 Claude prepares the **publishing package**: a page with the title (+ 2 alternatives), the

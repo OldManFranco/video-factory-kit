@@ -152,7 +152,10 @@ Claude STOPS. Fixes are done and the page is updated. Only **"approved"** moves 
 
 1. `py-render tools/render_graphics.py V --scale 0.25 --no-motion` — quick stills of every element in the profile's style.
 2. `py-render tools/storyboard.py V` → `storyboard.html` (optional `edit/gate2.json` with the editor's notes and what changed).
-   It shows (H26): the **SEQUENCE** of blocks; the **B-ROLL COVERAGE MAP** (what covers which words, in/out);
+   It starts with **the whole video at a glance**: one tile per beat, in order (every insert, and the host on camera
+   between them with lower thirds, name cards, subtitles and punch-ins), drawn the way the edit will look, with block,
+   start, length and the host's words under each tile (also saved as `work/qa/storyboard_sheet.jpg`).
+   Then (H26): the **SEQUENCE** of blocks; the **B-ROLL COVERAGE MAP** (what covers which words, in/out);
    **interviews kept** (% of each answer, H23); the **cut-off flags** (H20); warnings; choices and defaults broken;
    then one row per element with its thumbnail on the real frame of the cut.
 
