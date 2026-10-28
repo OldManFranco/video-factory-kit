@@ -8,8 +8,8 @@ You stay in control: Claude **stops at 3 approval gates** and waits for you to w
 
 Maintained by Franco.
 
-> **Status:** work in progress. The docs, rules, channel profile and tools are in. The installers for Windows and Mac
-> and a full end-to-end test arrive in the next phases.
+> **Status:** ready to use. Tested end to end on Windows (NVIDIA). The Mac installer is written but hasn't been run on a
+> real Mac yet: after the first Mac install, run `bash check.sh` and send the report if a line fails.
 
 ---
 
