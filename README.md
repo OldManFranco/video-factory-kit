@@ -31,10 +31,13 @@ terminal. You need a Claude subscription (Pro or Max).
 1. Download this kit (green "Code" button → Download ZIP, or `git clone`) and put the folder somewhere with space.
 2. Install the tools:
    - **Windows:** double-click `install.bat`.
-   - **Mac:** open Terminal in the kit folder and run `bash install.sh`.
+   - **Mac:** open Terminal in the kit folder and run `bash install.sh`. If the Mac has no Homebrew yet, the installer
+     installs it first and asks for your Mac password once.
 
-   It installs Python 3.12, ffmpeg, the transcription tools (WhisperX, faster-whisper), yt-dlp, Node.js +
-   HyperFrames and a browser for rendering graphics. It takes a while (big downloads).
+   It installs Python 3.12, ffmpeg, Node.js and Git (only what's missing), then the kit's two Python environments
+   (WhisperX, faster-whisper, yt-dlp, PyTorch — with CUDA on an NVIDIA PC — and OpenCV, MediaPipe, Pillow, Playwright
+   with its own Chromium), HyperFrames, and the speech models. Expect around 8–10 GB of downloads and 20–60 minutes.
+   You can run it again any time: it skips what's already there. Everything is logged in `install_log.txt`.
 3. Check everything works:
    - **Windows:** double-click `check.bat`.
    - **Mac:** `bash check.sh`.

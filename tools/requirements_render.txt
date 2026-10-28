@@ -1,0 +1,8 @@
+# tools/venv_render: graphics, storyboard, render, video QA, publishing package, brand kit.
+# After this: "python -m playwright install chromium" (Playwright's own Chromium, not the system browser).
+numpy>=2.0
+pillow==12.3.0
+fonttools==4.66.1
+opencv-python==5.0.0.93
+mediapipe==1.0.1
+playwright==1.63.0

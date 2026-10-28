@@ -27,3 +27,4 @@ node_modules/
 .DS_Store
 Thumbs.db
 desktop.ini
+install_log.txt

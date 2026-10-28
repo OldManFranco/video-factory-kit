@@ -1,0 +1,8 @@
+# tools/venv_audio: transcription, alignment, cut, audio QA, channel study.
+# PyTorch is installed first by the installer (CUDA build on Windows with an NVIDIA card, CPU build otherwise / on Mac).
+whisperx==3.8.6
+faster-whisper==1.2.1
+ctranslate2==4.8.3
+transformers==4.57.6
+numpy>=2.0
+yt-dlp
