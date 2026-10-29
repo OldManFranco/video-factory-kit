@@ -6,7 +6,7 @@ graphics, renders the video and prepares the title, thumbnail prompts and descri
 
 You stay in control: Claude **stops at 3 approval gates** and waits for you to write **"approved"**.
 
-Maintained by Franco.
+Maintained by Franco. Free for personal use on your own channel; not for resale (see `LICENSE`).
 
 > **Status:** ready to use. Tested end to end on Windows (NVIDIA). The Mac installer is written but hasn't been run on a
 > real Mac yet: after the first Mac install, run `bash check.sh` and send the report if a line fails.
