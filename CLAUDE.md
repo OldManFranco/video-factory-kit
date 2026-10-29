@@ -6,6 +6,12 @@ video through 3 approval gates. You (Claude) do the editing work; the person you
 `CHANNEL_PROFILE.md`.
 
 ## At the start of every session
+0. **Is the kit installed on this computer?** If `tools/venv_audio` or `tools/venv_render` is missing (or the editor
+   says "set up the kit", "install the kit"), install first: on a Mac run `bash install.sh`, on Windows run
+   `install.bat` (both skip what's already there; ask before running, they download ~8–10 GB). If it stops at a
+   password prompt (Homebrew on a Mac), tell the editor to open Terminal in the kit folder and type `bash install.sh`
+   themselves — you never type passwords. Then run the check (`bash check.sh` / `check.bat`) and fix any FAIL.
+   Only then go on to step 1.
 1. **Read `CHANNEL_PROFILE.md`.** If its JSON block says `"status": "EMPTY"`, run the first-session
    interview (`docs/first_session.md`) before anything else. Do not edit a video with an empty profile.
 2. Talk to the editor in the profile's `chat_language`. On-screen text uses `on_screen_language`.
